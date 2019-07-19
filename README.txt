@@ -77,7 +77,8 @@ WPlyr supports the last 2 versions of most modern browsers. For details, please 
 2. WPlyr Media Block - HTML5 Audio settings
 3. WPlyr Media Block - Youtube settings
 4. WPlyr Media Block - Vimeo settings
-5. WPlyr Media Block - Plugin settings interface
+5. Gutenberg block preview
+6. WPlyr Media Block - Plugin settings interface
 
 == Changelog ==
 
