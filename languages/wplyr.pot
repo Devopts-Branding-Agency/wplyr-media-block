@@ -1,0 +1,340 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: WPlyr Media Block\n"
+"POT-Creation-Date: 2019-07-18 06:10+0530\n"
+"PO-Revision-Date: 2019-07-18 03:52+0530\n"
+"Last-Translator: We Codify Co. <connect@wecodify.co>\n"
+"Language-Team: We Codify Co. <connect@wecodify.co>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wplyr.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: assets/js/plyr.polyfilled.js\n"
+
+#: includes/class-wplyr.php:303 includes/class-wplyr.php:470
+msgid "Settings"
+msgstr ""
+
+#: includes/class-wplyr.php:452
+msgid "WPlyr"
+msgstr ""
+
+#: includes/class-wplyr.php:456
+msgid "Player Color"
+msgstr ""
+
+#: includes/class-wplyr.php:457
+msgid "Control Visibility"
+msgstr ""
+
+#: includes/class-wplyr.php:459
+msgid "Play Large"
+msgstr ""
+
+#: includes/class-wplyr.php:460
+msgid "Restart"
+msgstr ""
+
+#: includes/class-wplyr.php:461
+msgid "Rewind"
+msgstr ""
+
+#: includes/class-wplyr.php:462
+msgid "Play"
+msgstr ""
+
+#: includes/class-wplyr.php:463
+msgid "Fast Forward"
+msgstr ""
+
+#: includes/class-wplyr.php:464
+msgid "Progress"
+msgstr ""
+
+#: includes/class-wplyr.php:465
+msgid "Current Time"
+msgstr ""
+
+#: includes/class-wplyr.php:466
+msgid "Duration"
+msgstr ""
+
+#: includes/class-wplyr.php:467
+msgid "Mute"
+msgstr ""
+
+#: includes/class-wplyr.php:468
+msgid "Volume"
+msgstr ""
+
+#: includes/class-wplyr.php:469
+msgid "Closed Captions"
+msgstr ""
+
+#: includes/class-wplyr.php:471
+msgid "Picture-in-Picture"
+msgstr ""
+
+#: includes/class-wplyr.php:472
+msgid "Airplay"
+msgstr ""
+
+#: includes/class-wplyr.php:473
+msgid "Download"
+msgstr ""
+
+#: includes/class-wplyr.php:474
+msgid "Fullscreen"
+msgstr ""
+
+#: includes/class-wplyr.php:489
+msgid "Settings controls"
+msgstr ""
+
+#: includes/class-wplyr.php:491
+msgid "Captions"
+msgstr ""
+
+#: includes/class-wplyr.php:492
+msgid "Quality"
+msgstr ""
+
+#: includes/class-wplyr.php:493
+msgid "Speed"
+msgstr ""
+
+#: includes/class-wplyr.php:496
+msgid "Seek Time"
+msgstr ""
+
+#: includes/class-wplyr.php:515
+msgid "Default time (in seconds) to skip when rewind/fast forward is enabled."
+msgstr ""
+
+#: includes/class-wplyr.php:529
+msgid "WPlyr Media"
+msgstr ""
+
+#: includes/class-wplyr.php:533
+msgid "Media Type"
+msgstr ""
+
+#: includes/class-wplyr.php:536
+msgid "Video"
+msgstr ""
+
+#: includes/class-wplyr.php:537
+msgid "Audio"
+msgstr ""
+
+#: includes/class-wplyr.php:538
+msgid "YouTube"
+msgstr ""
+
+#: includes/class-wplyr.php:539
+msgid "Vimeo"
+msgstr ""
+
+#: includes/class-wplyr.php:541
+msgid "Media Options"
+msgstr ""
+
+#: includes/class-wplyr.php:543
+msgid "Muted"
+msgstr ""
+
+#: includes/class-wplyr.php:544
+msgid "Loop"
+msgstr ""
+
+#: includes/class-wplyr.php:545
+msgid "Autoplay"
+msgstr ""
+
+#: includes/class-wplyr.php:560
+msgid "Video Poster"
+msgstr ""
+
+#: includes/class-wplyr.php:569
+msgid "Video Source"
+msgstr ""
+
+#: includes/class-wplyr.php:583
+msgid "Video Resolution"
+msgstr ""
+
+#: includes/class-wplyr.php:587
+msgid "240p"
+msgstr ""
+
+#: includes/class-wplyr.php:588
+msgid "360p"
+msgstr ""
+
+#: includes/class-wplyr.php:589
+msgid "480p"
+msgstr ""
+
+#: includes/class-wplyr.php:590
+msgid "576p"
+msgstr ""
+
+#: includes/class-wplyr.php:591
+msgid "720p"
+msgstr ""
+
+#: includes/class-wplyr.php:592
+msgid "1080p"
+msgstr ""
+
+#: includes/class-wplyr.php:593
+msgid "1440p"
+msgstr ""
+
+#: includes/class-wplyr.php:594
+msgid "2160p 4K"
+msgstr ""
+
+#: includes/class-wplyr.php:595
+msgid "2880p 4K Ultra HD"
+msgstr ""
+
+#: includes/class-wplyr.php:596
+msgid "4320p 8K"
+msgstr ""
+
+#: includes/class-wplyr.php:598
+msgid "Video Format"
+msgstr ""
+
+#: includes/class-wplyr.php:602
+msgid "MP4"
+msgstr ""
+
+#: includes/class-wplyr.php:603
+msgid "WebM"
+msgstr ""
+
+#: includes/class-wplyr.php:604 includes/class-wplyr.php:658
+msgid "Ogg"
+msgstr ""
+
+#: includes/class-wplyr.php:606
+msgid "Video File Link"
+msgstr ""
+
+#: includes/class-wplyr.php:611
+msgid "Video Caption"
+msgstr ""
+
+#: includes/class-wplyr.php:625
+msgid "Section Description"
+msgstr ""
+
+#: includes/class-wplyr.php:626
+msgid ""
+"Only <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/"
+"WebVTT_API#WebVTT_files\" target=\"_blank\">WebVTT</a> caption sources are "
+"supported."
+msgstr ""
+
+#: includes/class-wplyr.php:627
+msgid "Caption Language"
+msgstr ""
+
+#: includes/class-wplyr.php:631
+msgid "Caption Label"
+msgstr ""
+
+#: includes/class-wplyr.php:634
+msgid "Caption File Link"
+msgstr ""
+
+#: includes/class-wplyr.php:639
+msgid "Audio Source"
+msgstr ""
+
+#: includes/class-wplyr.php:653
+msgid "Audio Format"
+msgstr ""
+
+#: includes/class-wplyr.php:657
+msgid "Mp3"
+msgstr ""
+
+#: includes/class-wplyr.php:659
+msgid "Wav"
+msgstr ""
+
+#: includes/class-wplyr.php:661
+msgid "Audio File Link"
+msgstr ""
+
+#: includes/class-wplyr.php:665
+msgid "Youtube Video Link"
+msgstr ""
+
+#: includes/class-wplyr.php:674
+msgid "Vimeo Video Link"
+msgstr ""
+
+#: views/admin/template-sidebar.php:2
+msgid "Support"
+msgstr ""
+
+#: views/admin/template-sidebar.php:5
+msgid ""
+"Feel free to send us a message if you need help with this plugin or want "
+"customization services. We can tackle anything from small fixes to full "
+"website development work."
+msgstr ""
+
+#: views/admin/template-sidebar.php:11
+msgid "Contact Plugin Support Team"
+msgstr ""
+
+#: views/admin/template-sidebar.php:17
+msgid "Make A Donation"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: views/admin/template-top.php:3 views/admin/template-top.php:7
+msgid "WPlyr Media Block"
+msgstr ""
+
+#: views/admin/template-top.php:8
+msgid ""
+"A simple, accessible and customisable media player block for Video, Audio, "
+"YouTube and Vimeo."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wecodify.co/plugins/wplyr-media-block/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"WPlyr is an easy-to-use Gutenberg block which implements Plyr - A simple, "
+"lightweight and accessible HTML5, YouTube and Vimeo media player that "
+"supports modern browsers."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WeCodify Co."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wecodify.co"
+msgstr ""

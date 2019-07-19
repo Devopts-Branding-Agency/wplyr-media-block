@@ -1,0 +1,16 @@
+.wplyr-player > .plyr {
+	border-radius : 4px;
+	box-shadow    : 0 2px 15px rgba(0, 0, 0, .1);
+	margin-bottom : 1.6842em;
+}
+
+.wplyr-player > .plyr video,
+.wplyr-player > .plyr audio,
+.wplyr-player > .plyr iframe {
+	margin  : 0;
+	padding : 0;
+}
+
+.wplyr-player > .plyr audio {
+	display : inherit;
+}
