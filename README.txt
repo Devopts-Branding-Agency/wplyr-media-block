@@ -28,17 +28,35 @@ The HTML5 video player supports multiple resolution source selection and playbac
 **Easy Interface** \
 The plugin combines all the features into a single Gutenberg block allowing you to change the source and output with just a couple of clicks.
 
+**Closed Captions** \
+Full support for VTT captions and multiple caption tracks. Multi-lingual caption track is automatically selected from the viewer device's default language.
+
 **Controls** \
 10+ controls for the media player can be configured from the plugin's setting interface. By default the player includes controls for speed, fast-forward/skip, volume, captions, duration, video resolution selection, picture-in-picture feature, fullscreen, airplay and download.
 
-**Closed Captions** \
-Full support for VTT captions and multiple caption tracks. Multi-lingual caption track is automatically selected from the viewer device's default language.
+**Customization** \
+You can modify the player color from the plugin's setting interface to match your website's color scheme.
 
 **Clean HTML5** \
 Uses the correct semantic elements. `<input type="range">` for volume and `<progress>` for progress and well, `<button>`s for buttons. There's no `<span>` or `<a href="#">` button hacks.
 
 **Responsive** \
 Adapts to every and all resolutions and modern devices.
+
+### Browser Support
+
+|Browser|Supported |
+| :------------ | :------------ |
+|Safari|✓|
+|Mobile Safari|✓¹|
+|Firefox|✓|
+|Chrome|✓|
+|Opera|✓|
+|Edge|✓|
+|IE11|✓²|
+
+1. Volume controls are also disabled as they are handled device wide.
+2. Support extended via the use of polyfills.
 
 == Installation ==
 
@@ -47,6 +65,10 @@ Adapts to every and all resolutions and modern devices.
 3. After the activation in the plugin manager, you can find *WPlyr Media* from the block addition interface. Just click it to get started!
 
 == Frequently Asked Questions ==
+
+= Which browsers are currently supported? =
+
+WPlyr supports the last 2 versions of most modern browsers. For details, please refer to the browser support chart in the plugin description.
 
 
 == Screenshots ==
@@ -61,3 +83,4 @@ Adapts to every and all resolutions and modern devices.
 
 
 == Upgrade Notice ==
+
