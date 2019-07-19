@@ -273,14 +273,14 @@
 		 * @access   private
 		 */
 		private function define_hooks() {
-			add_action( 'plugin_action_links_wplyr/wplyr.php', [ $this, 'plugin_links' ] );
+			add_action( 'plugin_action_links_wplyr-media-block/wplyr.php', [ $this, 'plugin_links' ] );
 			add_action( 'after_setup_theme', [ $this, 'load_carbon_fields' ] );
 			add_action( 'plugins_loaded', [ $this, 'set_locale' ] );
 			add_action( 'carbon_fields_register_fields', [ $this, 'register_fields' ] );
 			add_action( 'wp_enqueue_scripts', [ $this, 'load_assets' ] );
 			add_action( 'admin_enqueue_scripts', [ $this, 'load_assets' ] );
 			add_action( 'carbon_fields_container_wplyr_after_sidebar', [ $this, 'options_sidebar' ] );
-			add_action( 'carbon_fields_container_wplyr_top', [ $this, 'options_top' ] );
+			add_action( 'carbon_fields_container_wplyr_before_fields', [ $this, 'options_top' ] );
 		}
 
 		/**
