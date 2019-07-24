@@ -1,31 +1,30 @@
 <?php
-	// get the attached video files.
-	if ( ! $video_sources = $data['wplyr_video_sources'] ) {
-		// bail out if sources not set.
-		return;
-	}
+// get the attached video files.
+if ( ! $video_sources = $data['wplyr_video_sources'] ) {
+	// bail out if sources not set.
+	return;
+}
 
-	// the poster image for the video.
-	$poster = isset( $data['wplyr_video_poster'] ) ? 'poster="' . $data['wplyr_video_poster'] . '"' : '';
+// the poster image for the video.
+$poster = isset( $data['wplyr_video_poster'] ) ? 'poster="' . $data['wplyr_video_poster'] . '"' : '';
 
-	// player options.
-	$player_options = isset( $data['wplyr_media_options'] ) ? $data['wplyr_media_options'] : [];
-	$player_options = join( ' ', $player_options );
+// player options.
+$player_options = isset( $data['wplyr_media_options'] ) ? $data['wplyr_media_options'] : [];
+$player_options = join( ' ', $player_options );
 
-	// video captions.
-	$video_captions = $data['wplyr_video_captions'];
+// video captions.
+$video_captions = $data['wplyr_video_captions'];
 
-	// default player class
-	$player_class = [ 'wplyr-player' ];
+// default player class
+$player_class = [ 'wplyr-player' ];
 
-	// player class type.
-	$player_class[] = 'wplyr-player-' . $data['wplyr_type'];
-	// player class Gutenberg class.
-	$player_class[] = isset( $attributes['className'] ) ? $attributes['className'] : '';
+// player class type.
+$player_class[] = 'wplyr-player-' . $data['wplyr_type'];
+// player class Gutenberg class.
+$player_class[] = isset( $attributes['className'] ) ? $attributes['className'] : '';
 
-	// merge the class.
-	$player_class = join( ' ', $player_class );
-
+// merge the class.
+$player_class = join( ' ', $player_class );
 ?>
 
 <div class="<?php echo $player_class; ?>">

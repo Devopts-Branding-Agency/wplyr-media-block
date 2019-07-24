@@ -1,27 +1,25 @@
 <?php
+// get the attached video files.
+if ( ! $audio_sources = $data['wplyr_audio_sources'] ) {
+	// bail out if ids not set.
+	return;
+}
 
-	// get the attached video files.
-	if ( ! $audio_sources = $data['wplyr_audio_sources'] ) {
-		// bail out if ids not set.
-		return;
-	}
+// player options.
+$player_options = isset( $data['wplyr_media_options'] ) ? $data['wplyr_media_options'] : [];
+$player_options = join( ' ', $player_options );
 
-	// player options.
-	$player_options = isset( $data['wplyr_media_options'] ) ? $data['wplyr_media_options'] : [];
-	$player_options = join( ' ', $player_options );
+// default player class
+$player_class = [ 'wplyr-player' ];
 
-	// default player class
-	$player_class = [ 'wplyr-player' ];
+// player class type.
+$player_class[] = 'wplyr-player-' . $data['wplyr_type'];
 
-	// player class type.
-	$player_class[] = 'wplyr-player-' . $data['wplyr_type'];
+// player class Gutenberg class.
+$player_class[] = isset( $attributes['className'] ) ? $attributes['className'] : '';
 
-	// player class Gutenberg class.
-	$player_class[] = isset( $attributes['className'] ) ? $attributes['className'] : '';
-
-	// merge the class.
-	$player_class = join( ' ', $player_class );
-
+// merge the class.
+$player_class = join( ' ', $player_class );
 ?>
 
 <div class="<?php echo $player_class; ?>">

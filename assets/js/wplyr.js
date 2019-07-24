@@ -9,9 +9,6 @@ function initWPlyr () {
 		if (!player.classList.contains('plyr')) {
 			// initialise Plyr
 			new Plyr(player, {
-				storage: {
-					enabled: false,
-				},
 				volume: 0.7,
 				captions: {
 					active: true,
