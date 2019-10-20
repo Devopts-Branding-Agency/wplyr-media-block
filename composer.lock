@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "htmlburger/carbon-fields",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "1d42d0f76e3e9267b73901444bb5ff547b15fb52"
+                "reference": "b52920b003b8884b7534d18db58de446051d35a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/1d42d0f76e3e9267b73901444bb5ff547b15fb52",
-                "reference": "1d42d0f76e3e9267b73901444bb5ff547b15fb52",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/b52920b003b8884b7534d18db58de446051d35a1",
+                "reference": "b52920b003b8884b7534d18db58de446051d35a1",
                 "shasum": ""
             },
             "require": {
@@ -45,6 +45,32 @@
                     "role": "Developer"
                 },
                 {
+                    "name": "Miroslav Mitev",
+                    "email": "mmitev.2create@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Atanas Angelov",
+                    "email": "atanas.angelov.dev@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Georgi Stoyanov",
+                    "email": "stoyanov.gs@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Plamen Kostadinov",
+                    "email": "pkostadinov.2create@gmail.com",
+                    "homepage": "http://plasmen.info/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Stanimir Panchev",
+                    "email": "Stan4omir@gmail.com",
+                    "role": "Developer"
+                },
+                {
                     "name": "Marin Atanasov",
                     "email": "contact@marinatanasov.com",
                     "homepage": "http://marinatanasov.com/",
@@ -56,29 +82,19 @@
                     "role": "Developer"
                 },
                 {
-                    "name": "Georgi Stoyanov",
-                    "email": "stoyanov.gs@gmail.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Stanimir Panchev",
-                    "email": "Stan4omir@gmail.com",
-                    "role": "Developer"
-                },
-                {
                     "name": "Peter Petrov",
                     "email": "peter.petrov89@gmail.com",
                     "role": "Developer"
                 },
                 {
-                    "name": "Plamen Kostadinov",
-                    "email": "pkostadinov.2create@gmail.com",
-                    "homepage": "http://plasmen.info/",
+                    "name": "Stanimir Stoyanov",
+                    "email": "stanimir.k.stoyanov@gmail.com",
                     "role": "Developer"
                 },
                 {
-                    "name": "Stanimir Stoyanov",
-                    "email": "stanimir.k.stoyanov@gmail.com",
+                    "name": "Kaloyan Ivanov",
+                    "email": "kaloyanxivanov@gmail.com",
+                    "homepage": "http://vilepixels.com/",
                     "role": "Developer"
                 },
                 {
@@ -95,22 +111,6 @@
                     "name": "Rashko Petrov",
                     "email": "brutalenemy666@gmail.com",
                     "homepage": "http://errorfactory.com/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Miroslav Mitev",
-                    "email": "mmitev.2create@gmail.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Kaloyan Ivanov",
-                    "email": "kaloyanxivanov@gmail.com",
-                    "homepage": "http://vilepixels.com/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Atanas Angelov",
-                    "email": "atanas.angelov.dev@gmail.com",
                     "role": "Developer"
                 },
                 {
@@ -137,7 +137,7 @@
             ],
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
-            "time": "2019-06-11T12:54:01+00:00"
+            "time": "2019-07-25T06:58:26+00:00"
         },
         {
             "name": "leafo/scssphp",

@@ -3,7 +3,7 @@ Contributors: jeetsaha86
 Donate link: https://www.paypal.com/paypalme2/wecodify/20
 Tags: gutenberg,HTML5 Video Player, Audio Player, Youtube Player, Vimeo Player
 Requires at least: 5.2.0
-Tested up to: 5.2.2
+Tested up to: 5.2.4
 Stable tag: trunk
 Requires PHP: 7.1
 License: GPLv2 or later
@@ -19,41 +19,39 @@ WPlyr is an easy-to-use Gutenberg block which implements [Plyr](https://plyr.io/
 Visit the [plugin demo](http://demo.staging-server.site/wplyr/) to see it in action.
 
 ### Features
-**Multi Formats** \
+**Multi Formats**
 Support for the major formats, HTML Video & Audio, YouTube & Vimeo. HTML5 Video supports MP4, WebM and OGV formats and HTML5 Audio supports MP3, OGG and WAV formats.
 
-**Video Resolution** \
+**Video Resolution**
 The HTML5 video player supports multiple resolution source selection and playback. Viewers can set the playback resolution on the fly from the player's settings interface.
 
-**Easy Interface** \
+**Easy Interface**
 The plugin combines all the features into a single Gutenberg block allowing you to change the source and output with just a couple of clicks.
 
-**Closed Captions** \
+**Closed Captions**
 Full support for VTT captions and multiple caption tracks. Multi-lingual caption track is automatically selected from the viewer device's default language.
 
-**Controls** \
+**Controls**
 10+ controls for the media player can be configured from the plugin's setting interface. By default the player includes controls for speed, fast-forward/skip, volume, captions, duration, video resolution selection, picture-in-picture feature, fullscreen, airplay and download.
 
-**Customization** \
+**Customization**
 You can modify the player color from the plugin's setting interface to match your website's color scheme.
 
-**Clean HTML5** \
+**Clean HTML5**
 Uses the correct semantic elements. `<input type="range">` for volume and `<progress>` for progress and well, `<button>`s for buttons. There's no `<span>` or `<a href="#">` button hacks.
 
-**Responsive** \
+**Responsive**
 Adapts to every and all resolutions and modern devices.
 
 ### Browser Support
 
-|Browser|Supported |
-| :------------ | :------------ |
-|Safari|✓|
-|Mobile Safari|✓¹|
-|Firefox|✓|
-|Chrome|✓|
-|Opera|✓|
-|Edge|✓|
-|IE11|✓²|
+Safari ✓
+Mobile Safari ✓¹
+Firefox ✓
+Chrome ✓
+Opera ✓
+Edge ✓
+IE11 ✓²
 
 1. Volume controls are also disabled as they are handled device wide.
 2. Support extended via the use of polyfills.
