@@ -15,7 +15,7 @@
  * Plugin Name:       WPlyr Media Block
  * Plugin URI:        https://wecodify.co/plugins/wplyr-media-block/
  * Description:       WPlyr is an easy-to-use Gutenberg block which implements Plyr - A simple, lightweight and accessible HTML5, YouTube and Vimeo media player that supports modern browsers.
- * Version:           1.0.1
+ * Version:           1.1.0
  * Author:            WeCodify Co.
  * Author URI:        https://wecodify.co
  * License:           GPL-2.0+
@@ -30,10 +30,10 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 // Currently plugin version. Start at version 1.0.0 and use SemVer - https://semver.org
-define( 'WPLYR_VERSION', '1.0.1' );
+define( 'WPLYR_VERSION', '1.1.0' );
 
 // PLYR_VERSION
-define( 'PLYR_VERSION', '3.5.6' );
+define( 'PLYR_VERSION', '3.2.3' );
 
 // Get the filesystem directory path (with trailing slash) for the plugin __FILE__ passed in.
 define( 'WPLYR_PATH', plugin_dir_path( __FILE__ ) );

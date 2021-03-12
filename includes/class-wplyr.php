@@ -18,9 +18,6 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Block;
 use Carbon_Fields\Field;
 
-// use the scss compiler.
-use Leafo\ScssPhp\Compiler;
-
 /**
  * The core plugin class.
  *
@@ -342,18 +339,28 @@ class Wplyr {
 	 */
 	public function load_assets() {
 
+		// register CSS for the plugin
+		wp_register_style( 'plyr', WPLYR_URL . 'assets/css/plyr.css', false, PLYR_VERSION );
+		wp_register_style( 'wplyr', WPLYR_URL . 'assets/css/wplyr.css', false, WPLYR_VERSION );
+		wp_register_style( 'wplyr-admin', WPLYR_URL . 'assets/css/wplyr-admin.css', false, WPLYR_VERSION );
+
+		// register JS for the plugin
+		wp_register_script( 'plyr', WPLYR_URL . 'assets/js/plyr.polyfilled.js', false, PLYR_VERSION, true );
+		wp_register_script( 'wplyr', WPLYR_URL . 'assets/js/wplyr.js', false, WPLYR_VERSION, true );
+
 		// admin only css.
 		if ( is_admin() ) {
-			wp_enqueue_style( 'wplyr-admin', WPLYR_URL . 'assets/css/wplyr-admin.css', false, PLYR_VERSION );
+			wp_enqueue_style( 'wplyr-admin' );
 		}
 
 		// enqueue css.
-		wp_enqueue_style( 'wplyr', WPLYR_URL . 'assets/css/wplyr.css', false, PLYR_VERSION );
-		wp_add_inline_style( 'wplyr', $this->compile_css() );
+		wp_enqueue_style( 'plyr' );
+		wp_enqueue_style( 'wplyr' );
+		wp_add_inline_style( 'wplyr', $this->set_ui_color() );
 
 		//enqueue js.
-		wp_enqueue_script( 'plyr', WPLYR_URL . 'assets/js/plyr.polyfilled.js', false, PLYR_VERSION, true );
-		wp_enqueue_script( 'wplyr', WPLYR_URL . 'assets/js/wplyr.js', false, WPLYR_VERSION, true );
+		wp_enqueue_script( 'plyr' );
+		wp_enqueue_script( 'wplyr' );
 		wp_localize_script( 'wplyr', 'wplyr', $this->generate_settings() );
 	}
 
@@ -408,32 +415,18 @@ class Wplyr {
 	}
 
 	/**
-	 * Compiles SCSS files into css string.
+	 * Sets the plyr UI color
 	 *
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function compile_css() {
-		// instantiate the Compiler class.
-		$scss = new Compiler();
-
-		// set the import path to the sass directory.
-		$scss->setImportPaths( WPLYR_PATH . 'assets/sass/' );
-
-		// set the output formatter to crunched.
-		$scss->setFormatter( '\Leafo\ScssPhp\Formatter\Crunched' );
+	private function set_ui_color() {
 
 		// modify the variables from options.
 		$accent_color = carbon_get_theme_option( 'wplyr_accent_color' ) ? carbon_get_theme_option( 'wplyr_accent_color' ) : '#eb4d4b';
-		$scss->setVariables( array(
-			'plyr-color-main' => apply_filters( 'wplyr_theme_accent_color', $accent_color )
-		) );
 
-		// finally compile the scss files and return the css.
-		$compiled_css = $scss->compile( '@import "plyr.scss";' );
-
-		// return the string.
-		return $compiled_css;
+		// return the style needed
+		return ':root { --plyr-color-main: ' . $accent_color . '; }';
 	}
 
 	/**

@@ -1,9 +1,9 @@
 === WPlyr Media Block ===
 Contributors: jeetsaha86
 Donate link: https://www.paypal.com/paypalme2/wecodify/20
-Tags: gutenberg,HTML5 Video Player, Audio Player, Youtube Player, Vimeo Player
+Tags: gutenberg, html5 video, youtube, vimeo, block, mp3 player, self-hosted video, player
 Requires at least: 5.2.0
-Tested up to: 5.2.4
+Tested up to: 5.7
 Stable tag: trunk
 Requires PHP: 7.1
 License: GPLv2 or later
@@ -16,7 +16,7 @@ WPlyr is an easy-to-use Gutenberg block which implements [Plyr](https://plyr.io/
 WPlyr is an easy-to-use Gutenberg block which implements [Plyr](https://plyr.io/) - A simple, lightweight and accessible HTML5, YouTube and Vimeo media player that supports modern browsers.
 
 ### Demo
-Visit the [plugin demo](http://demo.staging-server.site/wplyr/) to see it in action.
+Visit the [plugin demo](https://wplyr.wecodify.co/) to see it in action.
 
 ### Features
 **Multi Formats**
@@ -32,7 +32,7 @@ The plugin combines all the features into a single Gutenberg block allowing you 
 Full support for VTT captions and multiple caption tracks. Multi-lingual caption track is automatically selected from the viewer device's default language.
 
 **Controls**
-10+ controls for the media player can be configured from the plugin's setting interface. By default the player includes controls for speed, fast-forward/skip, volume, captions, duration, video resolution selection, picture-in-picture feature, fullscreen, airplay and download.
+10+ controls for the media player can be configured from the plugin's setting interface. By default, the player includes controls for speed, fast-forward/skip, volume, captions, duration, video resolution selection, picture-in-picture feature, fullscreen, airplay and download.
 
 **Customization**
 You can modify the player color from the plugin's setting interface to match your website's color scheme.
@@ -59,8 +59,9 @@ IE11 ✓²
 == Installation ==
 
 1. To install WPlyr Media Block, use the plugin manager in the WordPress administration. Go to *Plugins » Add New* and search for *WPlyr Media Block*.
-2. Click on *Install Now*.
-3. After the activation in the plugin manager, you can find *WPlyr Media* from the block addition interface. Just click it to get started!
+2. Install and activate the plugin.
+3. To configure the features and color scheme of the player, use the plugin's settings screen which can be found under *Settings » WPlyr*.
+4. To add the block to a post or page use the block addition interface to find *WPlyr Media*.
 
 == Frequently Asked Questions ==
 
@@ -73,13 +74,22 @@ WPlyr supports the last 2 versions of most modern browsers. For details, please 
 
 1. WPlyr Media Block - HTML5 Video settings
 2. WPlyr Media Block - HTML5 Audio settings
-3. WPlyr Media Block - Youtube settings
+3. WPlyr Media Block - YouTube settings
 4. WPlyr Media Block - Vimeo settings
-5. Gutenberg block preview
+5. WPlyr Media Block - Gutenberg block preview
 6. WPlyr Media Block - Plugin settings interface
 
 == Changelog ==
 
+= 1.1.0 =
+* [Tweak] Updated the Carbon Fields library to v3.2.3.
+* [Removed] Massive speed boost to player load by removing legacy SCSS compiler method in favor of using CSS variables instead.
+
+= 1.0.1 =
+* [Compatibility] Updated for WordPress 5.4
+ 
+= 1.0.0 =
+* Initial release!
 
 == Upgrade Notice ==
-
+Not Available

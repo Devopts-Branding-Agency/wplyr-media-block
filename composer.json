@@ -1,6 +1,5 @@
 {
     "require": {
-        "htmlburger/carbon-fields": "^3.1",
-        "leafo/scssphp": "^0.8.4"
+        "htmlburger/carbon-fields": "^3.1"
     }
 }
