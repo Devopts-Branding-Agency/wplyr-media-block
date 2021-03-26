@@ -1,5 +1,7 @@
 <div class="postbox wplyr-support-block">
-	<h3 class="hndle"><?php _e( 'Support', 'wplyr' ); ?></h3>
+	<div class="postbox-header">
+		<h3 class="hndle"><?php _e( 'Support', 'wplyr' ); ?></h3>
+	</div>
 	<div class="inside">
 		<p>
 			<?php _e( 'Feel free to send us a message if you need help with this plugin or want customization services. We can tackle anything from small fixes to full website development work.', 'wplyr' ); ?>

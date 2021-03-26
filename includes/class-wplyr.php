@@ -274,7 +274,7 @@ class Wplyr {
 		add_action( 'carbon_fields_register_fields', [ $this, 'register_fields' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'load_assets' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'load_assets' ] );
-		add_action( 'carbon_fields_container_wplyr_after_sidebar', [ $this, 'options_sidebar' ] );
+		add_action( 'carbon_fields_container_wplyr_before_sidebar', [ $this, 'options_sidebar' ] );
 		add_action( 'carbon_fields_container_wplyr_before_fields', [ $this, 'options_top' ] );
 	}
 
