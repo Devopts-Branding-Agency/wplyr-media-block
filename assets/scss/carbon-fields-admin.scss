@@ -321,7 +321,7 @@
 			border-right-width : 0;
 
 			&[hidden] {
-				opacity : 0.7;
+				display : none;
 			}
 
 			&.cf-field--invalid {
