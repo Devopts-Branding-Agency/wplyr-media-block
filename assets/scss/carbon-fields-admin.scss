@@ -1,0 +1,521 @@
+// =============================================================================
+// Imports
+// =============================================================================
+@import 'imports/mixins';
+@import 'imports/variables';
+
+// =============================================================================
+// UI FONT FACE
+// =============================================================================
+@include font-face(Poppins, '../fonts/poppins', 400, normal, woff2 woff);
+@include font-face(Poppins, '../fonts/poppins', 500, normal, woff2 woff);
+@include font-face(Poppins, '../fonts/poppins', 600, normal, woff2 woff);
+@include font-face(Poppins, '../fonts/poppins', 700, normal, woff2 woff);
+
+// =============================================================================
+// CF CONTAINER THEME
+// =============================================================================
+.carbon-theme-options {
+	max-width   : 1140px;
+	font-family : 'Poppins', sans-serif;
+
+	/* Default: Links */
+	a {
+		color           : $accent-color;
+		text-decoration : none;
+
+		&:hover,
+		&:focus {
+			color : $dark-text;
+		}
+	}
+
+	h2 {
+		display : none;
+	}
+
+	/* Default: Form Fields */
+	input[type=color],
+	input[type=date],
+	input[type=datetime-local],
+	input[type=datetime],
+	input[type=email],
+	input[type=month],
+	input[type=number],
+	input[type=password],
+	input[type=search],
+	input[type=tel],
+	input[type=text],
+	input[type=time],
+	input[type=url],
+	input[type=week],
+	select,
+	textarea {
+		color            : $dark-text;
+		box-shadow       : none;
+		border-radius    : $border-radius;
+		border           : 1px solid $border-color;
+		background-color : $white-background;
+
+		&:focus {
+			box-shadow : 0 0 0 1px $accent-color;
+		}
+	}
+}
+
+// =============================================================================
+// CF CONTAINER HEADER
+// =============================================================================
+.carbon-theme-options {
+	.plugin-options-top {
+		display     : flex;
+		align-items : center;
+		margin      : 0 0 15px;
+
+		.plugin-options-top-image {
+			& > img {
+				border-radius : 3px;
+				max-width     : 60px;
+				margin-right  : 15px;
+			}
+		}
+
+		.plugin-options-top-title {
+			& > h3 {
+				margin      : 0;
+				font-weight : 600;
+				font-size   : 23px;
+				line-height : 26px;
+
+				span {
+					font-size : 14px;
+					display   : block;
+				}
+			}
+		}
+	}
+}
+
+// =============================================================================
+// CF CONTAINER SIDEBAR
+// =============================================================================
+.carbon-theme-options {
+	.postbox-container {
+		margin   : 78px -300px 0 0 !important;
+		position : static !important;
+	}
+
+	/* PUBLISH ACTIONS */
+	#submitdiv {
+		border     : 0;
+		box-shadow : none;
+		background : none;
+
+		& > h3 {
+			display : none;
+		}
+
+		& > div {
+			border     : 1px solid $border-color-darker;
+			background : $white-background;
+
+			& > div {
+				float : none;
+
+				.spinner {
+					display : none;
+				}
+
+				.button {
+					color            : $white-background;
+					width            : 100%;
+					height           : 40px;
+					border           : 1px solid $accent-color-darker;
+					transition       : all .1s ease-in;
+					text-transform   : uppercase;
+					background-color : $accent-color;
+
+					&:focus,
+					&:hover {
+						border-color     : $dark-text;
+						background-color : $dark-text;
+					}
+				}
+			}
+		}
+	}
+
+	/* SUPPORT BOX */
+	.plugin-options-support {
+		margin : 0 0 -1px;
+
+		.postbox-header {
+			.hndle {
+				cursor : auto !important;
+			}
+		}
+
+		.support-text {
+			border      : 1px solid $border-color;
+			margin      : 1em 0;
+			padding     : 10px;
+			font-size   : 1em;
+			line-height : 1.5;
+		}
+
+		.icon-list {
+			margin     : 20px 0 0;
+			padding    : 0;
+			list-style : none;
+
+			.list-item {
+				margin  : 0;
+				padding : 0;
+
+				a {
+					display        : block;
+					font-weight    : 500;
+					padding-bottom : 10px;
+					margin-bottom  : 10px;
+					border-bottom  : 1px solid $border-color;
+					transition     : color .1s ease-in;
+
+					span {
+						margin-right : 5px;
+						transition   : none;
+					}
+				}
+
+				&:last-child a {
+					margin  : 0;
+					padding : 0;
+					border  : 0;
+				}
+			}
+		}
+	}
+}
+
+// =============================================================================
+// CF FIELDS : TABS
+// =============================================================================
+.carbon-theme-options {
+	.cf-container__tabs {
+		padding          : 12px;
+		background-color : $grey-background;
+	}
+
+	.cf-container__tabs-list {
+		margin : 0;
+
+		.cf-container__tabs-item {
+			border           : 1px solid $border-color;
+			font-size        : 1em;
+			font-weight      : 500;
+			border-radius    : $border-radius;
+			background-color : $white-background;
+
+			&:focus,
+			&:hover {
+				background-color : $grey-background;
+			}
+
+			&.cf-container__tabs-item--current {
+				color            : $white-background;
+				border-color     : $accent-color-darker;
+				background-color : $accent-color;
+			}
+		}
+	}
+}
+
+// =============================================================================
+// CF FIELDS : COMPLEX GROUP
+// =============================================================================
+.carbon-theme-options {
+	.cf-complex__actions {
+		.button {
+			color            : $accent-color;
+			box-shadow       : none;
+			border-color     : $accent-color;
+			background-color : $white-background;
+
+			&:hover,
+			&:focus {
+				color            : $white-background;
+				background-color : $accent-color;
+			}
+		}
+	}
+
+	.cf-complex__group-head {
+		border-bottom    : 1px solid $border-color;
+		background-color : $white-background;
+
+		.cf-complex__group-title {
+			text-transform : uppercase;
+		}
+
+		.cf-complex__group-index {
+			color            : $white-background;
+			margin           : -1px;
+			border-color     : $accent-color;
+			background-color : $accent-color;
+		}
+
+		&:focus,
+		&:hover {
+			border-color : $border-color;
+		}
+	}
+
+	.cf-complex__group-body {
+		border-top : 0;
+
+		.cf-field {
+			border-right-width : 1px !important;
+		}
+	}
+
+	.cf-complex__group-actions {
+		top         : 1px;
+		right       : 1px;
+		display     : flex;
+		height      : 40px;
+		position    : absolute;
+		align-items : stretch;
+
+		.cf-complex__group-action {
+			color            : #000000;
+			margin           : 0;
+			display          : block;
+			padding          : 0 8px;
+			border-left      : 1px solid $border-color;
+			background-color : $grey-background;
+
+			&:focus,
+			&:hover {
+				background-color : $white-background;
+			}
+
+			&:first-child {
+				display : none;
+			}
+		}
+	}
+}
+
+// =============================================================================
+// CF FIELDS : STRUCTURE
+// =============================================================================
+.carbon-theme-options {
+	.cf-container__fields {
+		margin : 0;
+	}
+
+	.cf-container {
+		.cf-field {
+			padding            : 0;
+			display            : flex;
+			flex-wrap          : wrap;
+			border-right-width : 0;
+
+			&[hidden] {
+				opacity : 0.7;
+			}
+
+			&.cf-field--invalid {
+				input[type=color],
+				input[type=date],
+				input[type=datetime-local],
+				input[type=datetime],
+				input[type=email],
+				input[type=month],
+				input[type=number],
+				input[type=password],
+				input[type=search],
+				input[type=tel],
+				input[type=text],
+				input[type=time],
+				input[type=url],
+				input[type=week],
+				select,
+				textarea {
+					border-color : $border-color-invalid;
+					box-shadow   : none;
+				}
+			}
+		}
+
+		.cf-field__error {
+			display : none;
+		}
+
+		.cf-field__head {
+			padding          : 12px;
+			min-width        : 200px;
+			flex             : 1 1 200px;
+			border-right     : 1px solid $border-color;
+			background-color : $grey-background;
+
+			.cf-field__label {
+				padding     : 0;
+				font-weight : 500;
+			}
+		}
+
+		.cf-field__body {
+			padding   : 12px;
+			max-width : calc(100% - 200px);
+		}
+
+		.cf-field__help {
+			margin      : 0 0 0 199px;
+			padding     : 5px 12px;
+			width       : calc(100% - 200px);
+			font-size   : 13px;
+			font-style  : normal;
+			background  : $grey-background;
+			border-left : 1px solid $border-color;
+		}
+	}
+}
+
+// =============================================================================
+// CF FIELDS : MULTI SELECT
+// =============================================================================
+.carbon-theme-options {
+	.cf-multiselect {
+		.cf-multiselect__control {
+			box-shadow : none;
+
+			&.cf-multiselect__control--is-focused,
+			&.cf-multiselect__control--is-focused:hover {
+				box-shadow : 0 0 0 1px $accent-color;
+			}
+		}
+
+		.cf-multiselect__multi-value {
+			padding : 2px 5px;
+		}
+
+		.cf-multiselect__input {
+			input[type='text'] {
+				height     : 18px;
+				min-height : auto;
+				box-shadow : none;
+
+				&:focus {
+					box-shadow : none;
+				}
+			}
+		}
+	}
+}
+
+// =============================================================================
+// CF FIELDS : UNIQUE ID
+// =============================================================================
+.carbon-theme-options {
+	.cf-uniqid {
+		.cf-uniqid__input {
+			width            : 100%;
+			background-color : #f8f8f8;
+		}
+	}
+}
+
+// =============================================================================
+// CF FIELDS : SET
+// =============================================================================
+.carbon-theme-options {
+	.cf-set__list {
+		padding   : 0;
+		display   : flex;
+		flex-wrap : wrap;
+		margin    : 0 0 -8px;
+	}
+
+	.cf-set__list-item {
+		margin     : 0;
+		flex-basis : 33%;
+		padding    : 0 0 8px;
+	}
+
+	.cf-set__input {
+		&:before {
+			color : #fca311;
+		}
+	}
+}
+
+// =============================================================================
+// CF FIELDS : COLOR
+// =============================================================================
+.carbon-theme-options {
+	.cf-color {
+		.cf-color__toggle {
+			width         : 55px;
+			border        : 1px solid $border-color;
+			box-shadow    : none;
+			border-radius : 3px 0 0 3px;
+
+			&:active {
+				transform : none;
+			}
+		}
+
+		.cf-color__reset {
+			color         : $dark-text;
+			border        : 1px solid $border-color;
+			width         : 25px;
+			margin        : 0;
+			height        : 28px;
+			text-align    : center;
+			background    : $grey-background;
+			border-radius : 0 3px 3px 0;
+		}
+
+		.cf-color__preview {
+			border : 0;
+			width  : 55px;
+		}
+
+		.cf-color__toggle-text {
+			display : none;
+		}
+	}
+}
+
+// =============================================================================
+// CF FIELDS : GUTENBERG OVERRIDES
+// =============================================================================
+.cf-block__fields .cf-set__list {
+	margin : 0 !important;
+}
+
+.cf-block__fields .cf-set__list li {
+	list-style   : none;
+	display      : inline-block;
+	margin-right : 15px;
+}
+
+.cf-block__fields .cf-complex__tabs--tabbed-horizontal {
+	margin-bottom : -1px;
+}
+
+.cf-block__fields .cf-complex__tabs--tabbed-horizontal .cf-complex__inserter {
+	margin-bottom : 0;
+}
+
+.cf-block__fields .cf-complex__tabs--tabbed-horizontal .cf-complex__tabs-list {
+	margin-bottom : 0;
+}
+
+.cf-block__fields .cf-complex__tabs--tabbed-horizontal .cf-complex__tabs-list li {
+	margin-bottom : 0;
+}
+
+.cf-block__fields .cf-complex__placeholder .cf-complex__placeholder-label {
+	display : none;
+}
