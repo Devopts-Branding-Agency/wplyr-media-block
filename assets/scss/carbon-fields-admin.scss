@@ -68,15 +68,17 @@
 // =============================================================================
 .carbon-theme-options {
 	.plugin-options-top {
+		margin      : 0 0 15px;
 		display     : flex;
 		align-items : center;
-		margin      : 0 0 15px;
+		min-height  : 60px;
 
 		.plugin-options-top-image {
 			& > img {
-				border-radius : 3px;
+				display       : block;
 				max-width     : 60px;
 				margin-right  : 15px;
+				border-radius : 3px;
 			}
 		}
 
@@ -101,7 +103,7 @@
 // =============================================================================
 .carbon-theme-options {
 	.postbox-container {
-		margin   : 78px -300px 0 0 !important;
+		margin   : 75px -300px 0 0 !important;
 		position : static !important;
 	}
 
@@ -370,13 +372,23 @@
 		}
 
 		.cf-field__help {
-			margin      : 0 0 0 199px;
-			padding     : 5px 12px;
-			width       : calc(100% - 200px);
-			font-size   : 13px;
-			font-style  : normal;
-			background  : $grey-background;
-			border-left : 1px solid $border-color;
+			width      : 100%;
+			margin     : 0;
+			padding    : 5px 12px 5px 212px;
+			font-size  : 12px;
+			font-style : normal;
+			background : #f6f7f7;
+			position   : relative;
+
+			&:before {
+				top         : 0;
+				left        : 199px;
+				bottom      : 0;
+				content     : '';
+				display     : block;
+				position    : absolute;
+				border-left : 1px solid $border-color;
+			}
 		}
 	}
 }
@@ -491,7 +503,8 @@
 // CF FIELDS : GUTENBERG OVERRIDES
 // =============================================================================
 .cf-block__fields .cf-set__list {
-	margin : 0 !important;
+	margin  : 0 !important;
+	padding : 0;
 }
 
 .cf-block__fields .cf-set__list li {
@@ -502,6 +515,10 @@
 
 .cf-block__fields .cf-complex__tabs--tabbed-horizontal {
 	margin-bottom : -1px;
+}
+
+.cf-block__fields .cf-complex__group--tabbed .cf-complex__group-body {
+	border-top-width : 0;
 }
 
 .cf-block__fields .cf-complex__tabs--tabbed-horizontal .cf-complex__inserter {

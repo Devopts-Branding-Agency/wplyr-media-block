@@ -31,12 +31,12 @@ $player_class = join( ' ', $player_class );
 	<video controls <?php echo $player_options; ?> crossorigin playsinline <?php echo $poster; ?>>
 		<?php foreach ( $video_sources as $video_source ) : ?>
 			<source src="<?php echo $video_source['link']; ?>"
-					size="<?php echo $video_source['size']; ?>"
-					type="<?php echo $video_source['mime']; ?>">
+			        size="<?php echo $video_source['size']; ?>"
+			        type="<?php echo $video_source['mime']; ?>">
 		<?php endforeach; ?>
 		<?php foreach ( $video_captions as $video_caption ) : ?>
 			<track kind="captions" label="<?php echo $video_caption['label']; ?>"
-				   src="<?php echo $video_caption['link']; ?>" srclang="<?php echo $video_caption['language']; ?>">
+			       src="<?php echo $video_caption['link']; ?>" srclang="<?php echo $video_caption['language']; ?>">
 		<?php endforeach; ?>
 	</video>
 </div>

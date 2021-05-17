@@ -26,7 +26,7 @@ $player_class = join( ' ', $player_class );
 	<audio <?php echo $player_options; ?> crossorigin>
 		<?php foreach ( $audio_sources as $audio_source ) : ?>
 			<source src="<?php echo $audio_source['link']; ?>"
-					type="<?php echo $audio_source['mime']; ?>">
+			        type="<?php echo $audio_source['mime']; ?>">
 		<?php endforeach; ?>
 	</audio>
 </div>
