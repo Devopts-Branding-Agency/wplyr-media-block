@@ -1,8 +1,13 @@
 <?php
 // get the attached video files.
 if ( ! $video_sources = $data['wplyr_video_sources'] ) {
-	// bail out if sources not set.
-	return;
+	$video_sources = [
+		[
+			'link' => WPLYR_URL . 'assets/video/blank.mp4',
+			'size' => '240',
+			'mime' => 'video/mp4'
+		]
+	];
 }
 
 // the poster image for the video.

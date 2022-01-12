@@ -1,8 +1,7 @@
 <?php
 // get the yt video link.
 if ( ! $vimeo_url = $data['wplyr_vimeo_sources'] ) {
-	// bail out if ids not set.
-	return;
+	$vimeo_url = 'https://vimeo.com/483023965';
 }
 
 // default player class

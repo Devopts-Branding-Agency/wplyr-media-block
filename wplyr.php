@@ -33,7 +33,7 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'WPLYR_VERSION', '1.2.0' );
 
 // PLYR_VERSION
-define( 'PLYR_VERSION', '3.2.3' );
+define( 'PLYR_VERSION', '3.6.8' );
 
 // Get the filesystem directory path (with trailing slash) for the plugin __FILE__ passed in.
 define( 'WPLYR_PATH', plugin_dir_path( __FILE__ ) );

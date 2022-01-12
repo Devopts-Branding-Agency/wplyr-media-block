@@ -1,8 +1,7 @@
 <?php
 // get the yt video link.
 if ( ! $youtube_url = $data['wplyr_youtube_sources'] ) {
-	// bail out if ids not set.
-	return;
+	$youtube_url = 'https://www.youtube.com/watch?v=MLpWrANjFbI';
 }
 
 // default player class

@@ -270,6 +270,7 @@ class Wplyr {
 	private function define_hooks() {
 		add_action( 'plugin_action_links_wplyr-media-block/wplyr.php', [ $this, 'plugin_links' ] );
 		add_action( 'after_setup_theme', [ $this, 'load_carbon_fields' ] );
+		add_action( 'after_setup_theme', [ $this, 'add_review_notification' ] );
 		add_action( 'plugins_loaded', [ $this, 'set_locale' ] );
 		add_action( 'carbon_fields_register_fields', [ $this, 'register_fields' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'load_assets' ] );
@@ -315,6 +316,25 @@ class Wplyr {
 	}
 
 	/**
+	 *
+	 * Create an instance of the WRM class which will be used to register the fields
+	 * with WordPress.
+	 *
+	 * @since    1.0.0
+	 * @access   public
+	 */
+	public function add_review_notification() {
+		new WP_Review_Me( array(
+			'days_after' => 15,
+			'type'       => 'plugin',
+			'slug'       => 'wplyr-media-block',
+			'rating'     => 5,
+			'message'    => __( 'Hello! It has been a while that you have been using WPlyr Media Block. You might not realize it, but reviews are such a great help to us. We would be grateful if you could take a minute to leave a review on WordPress.org. Many thanks in advance :) ', 'wplyr' ),
+			'link_label' => __( 'Click here to leave your Review.', 'wplyr' )
+		) );
+	}
+
+	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
 	 * Uses the Wplyr_i18n class in order to set the domain and to register the hook
@@ -329,7 +349,7 @@ class Wplyr {
 	}
 
 	/**
-	 * Registers and enqueues theCSS and JS.
+	 * Registers and enqueues the CSS and JS.
 	 *
 	 * Uses the wp_enqueue_style and wp_enqueue_script functions to add
 	 * the files to the pages.
@@ -340,12 +360,12 @@ class Wplyr {
 	public function load_assets() {
 
 		// register CSS for the plugin
-		wp_register_style( 'plyr', WPLYR_URL . 'assets/css/plyr.css', false, PLYR_VERSION );
+		wp_register_style( 'plyr', WPLYR_URL . 'assets/css/plyr.min.css', false, PLYR_VERSION );
 		wp_register_style( 'wplyr', WPLYR_URL . 'assets/css/wplyr.css', false, WPLYR_VERSION );
 		wp_register_style( 'carbon-fields-admin', WPLYR_URL . 'assets/css/carbon-fields-admin.css', false, WPLYR_VERSION );
 
 		// register JS for the plugin
-		wp_register_script( 'plyr', WPLYR_URL . 'assets/js/plyr.polyfilled.js', false, PLYR_VERSION, true );
+		wp_register_script( 'plyr', WPLYR_URL . 'assets/js/plyr.min.js', false, PLYR_VERSION, true );
 		wp_register_script( 'wplyr', WPLYR_URL . 'assets/js/wplyr.js', false, WPLYR_VERSION, true );
 
 		// admin only css.
@@ -698,7 +718,7 @@ class Wplyr {
 		      ->set_category( 'media' )
 		      ->set_description( __( 'Embeds a nice player for HTML, YouTube and Vimeo videos.', 'wplyr' ) )
 		      ->set_keywords( [ __( 'video', 'wplyr' ), __( 'youtube', 'wplyr' ), __( 'vimeo', 'wplyr' ) ] )
-		      ->set_preview_mode( true )
+		      ->set_mode( 'preview' )
 		      ->add_fields( $fields )
 		      ->set_render_callback( function ( $fields, $attributes ) {
 			      // type of the block.
@@ -838,5 +858,4 @@ class Wplyr {
 	public function get_version() {
 		return $this->version;
 	}
-
 }

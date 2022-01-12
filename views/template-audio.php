@@ -1,8 +1,12 @@
 <?php
 // get the attached video files.
 if ( ! $audio_sources = $data['wplyr_audio_sources'] ) {
-	// bail out if ids not set.
-	return;
+	$audio_sources = [
+		[
+			'link' => WPLYR_URL . 'assets/audio/blank.mp3',
+			'mime' => 'audio/mp3'
+		]
+	];
 }
 
 // player options.
