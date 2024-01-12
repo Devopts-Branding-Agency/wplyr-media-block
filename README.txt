@@ -1,9 +1,9 @@
 === WPlyr Media Block ===
 Contributors: jeetsaha86
-Donate link: https://www.paypal.com/paypalme2/wecodify/20
+Donate link: https://www.paypal.me/devopts/20
 Tags: gutenberg,html5,video,youtube,vimeo,block,mp3 player,self-hosted,player
 Requires at least: 5.2.0
-Tested up to: 5.8
+Tested up to: 6.4.2
 Stable tag: trunk
 Requires PHP: 7.1
 License: GPLv2 or later
@@ -80,6 +80,12 @@ WPlyr supports the last 2 versions of most modern browsers. For details, please 
 6. WPlyr Media Block - Plugin settings interface
 
 == Changelog ==
+= 1.3.0 =
+[Added] Enabled support for toggling preview mode
+[Tweak] Updated the Carbon Fields library to v3.6.3
+[Tweak] Updated the Plyr JS library to v3.7.8
+[Tweak] Rebranded the plugin owner
+[Removed] ReviewMe feature inside the plugin was throwing PHP warning, so it was scrapped
 
 = 1.2.0 =
 [Added] Integrated support for video monetization with vi.ai
