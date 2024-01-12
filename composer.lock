@@ -4,28 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23323529091cac256958cff7d288d3a6",
+    "content-hash": "b07385fadf5e5649b400db93f6ca8a68",
     "packages": [
         {
             "name": "htmlburger/carbon-fields",
-            "version": "v3.3.2",
+            "version": "v3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "dd5663e14c6db365323b688dbae1cfbeaf14bee7"
+                "reference": "d913a5148cb9dc61ed239719c747f4ebb513003f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/dd5663e14c6db365323b688dbae1cfbeaf14bee7",
-                "reference": "dd5663e14c6db365323b688dbae1cfbeaf14bee7",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/d913a5148cb9dc61ed239719c747f4ebb513003f",
+                "reference": "d913a5148cb9dc61ed239719c747f4ebb513003f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.6.20"
             },
             "require-dev": {
-                "mockery/mockery": "^0.9.7",
-                "phpunit/phpunit": "~4.8"
+                "mockery/mockery": "1.3.6",
+                "phpunit/phpunit": "7.5.20|9.6.3",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -143,95 +144,7 @@
                 "issues": "https://github.com/htmlburger/carbon-fields/issues",
                 "source": "https://github.com/htmlburger/carbon-fields"
             },
-            "time": "2021-04-22T13:24:34+00:00"
-        },
-        {
-            "name": "julien731/wp-dismissible-notices-handler",
-            "version": "1.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/julien731/WP-Dismissible-Notices-Handler.git",
-                "reference": "062b1472ddbac450f87a85fc4b979e04cde3a344"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/julien731/WP-Dismissible-Notices-Handler/zipball/062b1472ddbac450f87a85fc4b979e04cde3a344",
-                "reference": "062b1472ddbac450f87a85fc4b979e04cde3a344",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "handler.php",
-                    "includes/helper-functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GNU GPL"
-            ],
-            "authors": [
-                {
-                    "name": "Julien Liabeuf",
-                    "email": "julien@liabeuf.fr",
-                    "homepage": "https://julienliabeuf.com",
-                    "role": "Lead Developer"
-                }
-            ],
-            "description": "A simple library to handle Ajax-dismissible admin notices for WordPress",
-            "homepage": "https://github.com/julien731/WP-Dismissible-Notices-Handler",
-            "support": {
-                "issues": "https://github.com/julien731/WP-Dismissible-Notices-Handler/issues",
-                "source": "https://github.com/julien731/WP-Dismissible-Notices-Handler/tree/1.2.2"
-            },
-            "time": "2021-02-17T15:56:18+00:00"
-        },
-        {
-            "name": "julien731/wp-review-me",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/julien731/WP-Review-Me.git",
-                "reference": "cb43e768e0dc1e2eb8e1a3a96ffa3dfd9f890602"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/julien731/WP-Review-Me/zipball/cb43e768e0dc1e2eb8e1a3a96ffa3dfd9f890602",
-                "reference": "cb43e768e0dc1e2eb8e1a3a96ffa3dfd9f890602",
-                "shasum": ""
-            },
-            "require": {
-                "julien731/wp-dismissible-notices-handler": "1.*",
-                "php": ">=5.5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "review.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GNU GPL"
-            ],
-            "authors": [
-                {
-                    "name": "Julien Liabeuf",
-                    "email": "julien@liabeuf.fr",
-                    "homepage": "https://julienliabeuf.com",
-                    "role": "Lead Developer"
-                }
-            ],
-            "description": "A lightweight library to help you get more reviews for your WordPress theme/plugin",
-            "homepage": "https://github.com/julien731/WP-Review-Me",
-            "support": {
-                "issues": "https://github.com/julien731/WP-Review-Me/issues",
-                "source": "https://github.com/julien731/WP-Review-Me/tree/develop"
-            },
-            "time": "2016-09-27T04:04:50+00:00"
+            "time": "2023-11-28T15:52:46+00:00"
         }
     ],
     "packages-dev": [],
@@ -242,5 +155,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.6.0"
 }

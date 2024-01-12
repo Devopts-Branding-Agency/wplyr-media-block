@@ -1,6 +1,5 @@
 {
     "require": {
-        "htmlburger/carbon-fields": "^3.1",
-        "julien731/wp-review-me": "^2.0"
+        "htmlburger/carbon-fields": "^3.1"
     }
 }

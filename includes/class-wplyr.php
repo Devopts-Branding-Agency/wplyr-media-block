@@ -5,7 +5,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       https://wecodify.co
+ * @link       https://devopts.com
  * @since      1.0.0
  *
  * @package    Wplyr
@@ -30,7 +30,7 @@ use Carbon_Fields\Field;
  * @since      1.0.0
  * @package    Wplyr
  * @subpackage Wplyr/includes
- * @author     WeCodify Co. <connect@wecodify.co>
+ * @author     WeCodify Co. <info@devopts.com>
  */
 class Wplyr {
 
@@ -270,7 +270,6 @@ class Wplyr {
 	private function define_hooks() {
 		add_action( 'plugin_action_links_wplyr-media-block/wplyr.php', [ $this, 'plugin_links' ] );
 		add_action( 'after_setup_theme', [ $this, 'load_carbon_fields' ] );
-		add_action( 'after_setup_theme', [ $this, 'add_review_notification' ] );
 		add_action( 'plugins_loaded', [ $this, 'set_locale' ] );
 		add_action( 'carbon_fields_register_fields', [ $this, 'register_fields' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'load_assets' ] );
@@ -313,25 +312,6 @@ class Wplyr {
 	public function load_carbon_fields() {
 		require_once( WPLYR_PATH . 'vendor/autoload.php' );
 		Carbon_Fields::boot();
-	}
-
-	/**
-	 *
-	 * Create an instance of the WRM class which will be used to register the fields
-	 * with WordPress.
-	 *
-	 * @since    1.0.0
-	 * @access   public
-	 */
-	public function add_review_notification() {
-		new WP_Review_Me( array(
-			'days_after' => 15,
-			'type'       => 'plugin',
-			'slug'       => 'wplyr-media-block',
-			'rating'     => 5,
-			'message'    => __( 'Hello! It has been a while that you have been using WPlyr Media Block. You might not realize it, but reviews are such a great help to us. We would be grateful if you could take a minute to leave a review on WordPress.org. Many thanks in advance :) ', 'wplyr' ),
-			'link_label' => __( 'Click here to leave your Review.', 'wplyr' )
-		) );
 	}
 
 	/**
@@ -409,11 +389,7 @@ class Wplyr {
 				'fullscreen'
 			],
 			'settings'   => [ 'captions', 'quality', 'speed' ],
-			'seekTime'   => 10,
-			'ads'        => [
-				'enabled'     => false,
-				'publisherId' => ''
-			]
+			'seekTime'   => 10
 		];
 
 		// empty argument array
@@ -541,23 +517,6 @@ class Wplyr {
 					     'compare' => 'INCLUDES',
 				     ),
 			     ) )
-			     ->set_help_text( __( 'Default time (in seconds) to skip when rewind/fast forward is enabled.', 'wplyr' ) ),
-			Field::make( 'radio', 'wplyr_monetization', __( 'Monetization', 'wplyr' ) )
-			     ->set_options( array(
-				     0 => __( 'Disable', 'wplyr' ),
-				     1 => __( 'Enable', 'wplyr' )
-			     ) )
-			     ->set_help_text( __( 'You can use <a href="https://www.vi.ai/publisher-contextual-video/" target="_blank">vi.ai</a> to offer monetization options for your videos', 'wplyr' ) ),
-			Field::make( 'text', 'wplyr_publisher_id', __( 'Publisher ID', 'wplyr' ) )
-			     ->set_required( true )
-			     ->set_conditional_logic( array(
-				     array(
-					     'field'   => 'wplyr_monetization',
-					     'value'   => true,
-					     'compare' => '=',
-				     )
-			     ) )
-			     ->set_help_text( __( 'Your unique <a href="https://www.vi.ai/publisher-contextual-video/" target="_blank">vi.ai</a> publisher ID', 'wplyr' ) ),
 		);
 
 		// fields for blocks/post meta.
@@ -718,9 +677,9 @@ class Wplyr {
 		      ->set_category( 'media' )
 		      ->set_description( __( 'Embeds a nice player for HTML, YouTube and Vimeo videos.', 'wplyr' ) )
 		      ->set_keywords( [ __( 'video', 'wplyr' ), __( 'youtube', 'wplyr' ), __( 'vimeo', 'wplyr' ) ] )
-		      ->set_mode( 'preview' )
+		      ->set_mode( 'both' )
 		      ->add_fields( $fields )
-		      ->set_render_callback( function ( $fields, $attributes ) {
+		      ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
 			      // type of the block.
 			      $type = $fields['wplyr_type'];
 			      // slug of the template to load.

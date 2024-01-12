@@ -1,7 +1,7 @@
 // select all player classes
 function initWPlyr() {
     // get the immediate child of the .wplyr-player class
-    const players = document.querySelectorAll('.wplyr-player > *');
+    const players = document.querySelectorAll('.wplyr-player > *:not(.plyr)');
 
     // iterate over all the found instances
     [].forEach.call(players, player => {
@@ -21,11 +21,7 @@ function initWPlyr() {
                 controls: wplyr.controls,
                 settings: wplyr.settings,
                 blankVideo: wplyr.blankVideo,
-                seekTime: parseInt(wplyr.seekTime),
-                ads: {
-                    enabled: wplyr.ads.enabled,
-                    publisherId: wplyr.ads.publisherId
-                }
+                seekTime: parseInt(wplyr.seekTime)
             })
         }
     })

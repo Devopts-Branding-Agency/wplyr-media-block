@@ -8,13 +8,13 @@
 		</div>
 		<ul class="icon-list">
 			<li class="list-item">
-				<a href="https://wecodify.co/contact/" target="_blank">
+				<a href="https://devopts.com/contact/" target="_blank">
 					<span class="dashicons dashicons-editor-help"> </span>
 					<?php _e( 'Contact Plugin Support Team', $plugin_name ); ?>
 				</a>
 			</li>
 			<li class="list-item">
-				<a href="https://www.paypal.me/wecodify/20" target="_blank">
+				<a href="https://www.paypal.me/devopts/20" target="_blank">
 					<span class="dashicons dashicons-heart"> </span>
 					<?php _e( 'Make A Donation', $plugin_name ); ?>
 				</a>
